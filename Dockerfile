@@ -12,6 +12,7 @@ RUN apt-get update && \
   clang \
   curl \
   g++ \
+  gcc-multilib \
   llvm \
   mercurial \
   python \
