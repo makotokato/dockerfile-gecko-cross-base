@@ -15,6 +15,7 @@ RUN apt-get update && \
   gcc-multilib \
   llvm \
   mercurial \
+  nodejs \
   python \
   unzip \
   zip && \
