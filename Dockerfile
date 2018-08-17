@@ -15,16 +15,16 @@ RUN apt-get update && \
   gcc-multilib \
   llvm \
   mercurial \
-  nodejs \
   python \
   unzip \
   zip && \
    apt-get clean
-RUN curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init && \
+RUN curl -s https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init -o rustup-init && \
     chmod +x rustup-init && \
     ./rustup-init -y && \
     rm rustup-init
-ENV PATH=$PATH:/root/.cargo/bin
+RUN curl -s https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.xz | tar Jxf -
+ENV PATH=$PATH:/root/.cargo/bin:/root/node-v8.11.4-linux-x64/bin
 
 #RUN adduser --ingroup users --disabled-password  --gecos '' builder
 ENV SHELL=/bin/bash
