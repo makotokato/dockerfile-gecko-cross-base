@@ -24,7 +24,7 @@ RUN curl -s https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/ru
     ./rustup-init -y && \
     rm rustup-init
 RUN curl -s https://nodejs.org/dist/v8.11.4/node-v8.11.4-linux-x64.tar.xz | tar Jxf -
-ENV PATH=$PATH:/root/.cargo/bin:/root/node-v8.11.4-linux-x64/bin
+ENV PATH=$PATH:/root/.cargo/bin:/node-v8.11.4-linux-x64/bin
 
 #RUN adduser --ingroup users --disabled-password  --gecos '' builder
 ENV SHELL=/bin/bash
